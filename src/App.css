@@ -1,0 +1,90 @@
+.app{
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+}
+.tictactoe{
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.tictactoe h1{
+  font-size: 5rem;
+  font-family: poppins;
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.main{
+  width: 30vw;
+  height: 40vh;
+  background-color: whitesmoke;
+}
+.main .board{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.wins{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-family: poppins;
+}
+.board .row{
+  height: 100%;
+  width: calc(100%/3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.board .row .cell{
+  background-color: aqua;
+  border: 5px solid black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;  
+  font-family: poppins;
+  color: black;
+  cursor: pointer;
+}
+
+.cross::after{
+  content: '';
+  height: 90px;
+  width: 15px;
+  rotate: 45deg;
+  background-color: black;
+}
+.cross::before{
+  content: '';
+  position: relative;
+  right: -16px;
+  height: 90px;
+  width: 15px;
+  rotate: -45deg;
+  background-color: black;
+}
+.circle::after{
+  content: '';
+  height: 55px;
+  width: 55px;
+  background-color: transparent;
+  border: 15px solid black;
+  border-radius: 50%;
+}
